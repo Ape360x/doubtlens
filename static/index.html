@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DoubtLens — snap the doubt</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <div class="brand">
+          <div class="logo">DL</div>
+          <div>
+            <h1>DoubtLens</h1>
+            <p>Snap the worksheet. Get the next step, not a dumped answer.</p>
+          </div>
+        </div>
+        <div class="pill" id="health">Checking tutor...</div>
+      </header>
+
+      <section class="howto card">
+        <div><strong>1.</strong> Photograph the page</div>
+        <div><strong>2.</strong> Read the hint and next step</div>
+        <div><strong>3.</strong> Try one move, then check it</div>
+      </section>
+
+      <main class="grid">
+        <section class="card">
+          <h2>Show the problem</h2>
+          <div class="drop" id="drop">
+            <div id="dropLabel">
+              <strong>Drop a photo</strong>
+              <p>Worksheet, textbook page, or neat handwriting. Or tap a sample below.</p>
+            </div>
+            <img id="preview" alt="Uploaded problem" hidden />
+          </div>
+          <input id="file" type="file" accept="image/*" capture="environment" hidden />
+          <div class="samples" id="samples"></div>
+
+          <div class="controls">
+            <div>
+              <label for="grade">Grade band</label>
+              <select id="grade">
+                <option value="middle-school">Middle school</option>
+                <option value="high-school" selected>High school</option>
+                <option value="early-college">Early college</option>
+              </select>
+            </div>
+            <div>
+              <label for="subject">Subject hint</label>
+              <select id="subject">
+                <option value="other">Auto-detect</option>
+                <option value="math">Math</option>
+                <option value="physics">Physics</option>
+                <option value="chemistry">Chemistry</option>
+                <option value="biology">Biology</option>
+              </select>
+            </div>
+            <div>
+              <label for="language">Language</label>
+              <select id="language">
+                <option>English</option>
+                <option>Hindi</option>
+                <option>Spanish</option>
+                <option>French</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="modes">
+            <button class="chip" data-mode="hint" type="button">Hint only</button>
+            <button class="chip active" data-mode="next-step" type="button">Next step</button>
+            <button class="chip" data-mode="full-solution" type="button">Full solution</button>
+          </div>
+
+          <div class="actions">
+            <button class="primary" id="ask" type="button">Read the page</button>
+            <button class="ghost" id="reset" type="button">Clear</button>
+          </div>
+          <div class="status" id="status"></div>
+        </section>
+
+        <section class="card">
+          <h2>Learn from it</h2>
+          <div id="result">
+            <p class="result-empty">Upload a problem photo or choose a sample worksheet.</p>
+          </div>
+          <div class="attempt-box" id="attemptBox" hidden>
+            <label for="attempt">I tried this</label>
+            <textarea id="attempt" rows="3" placeholder="Write the step you just tried..."></textarea>
+            <button class="ghost" id="checkAttempt" type="button">Check my step</button>
+            <div class="status" id="attemptStatus"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "subject": "biology",
+  "confidence": 0.88,
+  "extracted_problem": "A plant is kept in the dark for 48 hours, then one leaf is covered with black paper and the plant is placed in sunlight for 6 hours. The leaf is tested for starch. What result do you expect, and why?",
+  "found_questions": [
+    {"label": "Q1", "text": "What starch-test result do you expect for the covered and uncovered parts of the leaf, and why?"}
+  ],
+  "student_goal": "Predict the starch test result and explain it using photosynthesis.",
+  "hint": "Starch only forms if the leaf can photosynthesize. What two things does that process need from this experiment?",
+  "next_step": "Split the leaf into the covered part and the uncovered part, and ask which part received light.",
+  "common_mistake": "Saying the whole leaf has no starch because the plant was destarched earlier, and forgetting that the uncovered part could make new starch in the sunlight.",
+  "worked_solution": "The 48 hours in the dark destarch the leaf. After sunlight, only the uncovered part can photosynthesize, so only that part should test positive for starch (blue-black with iodine). The covered part stays starch-negative because light could not reach it.",
+  "practice": [
+    {
+      "question": "Why do teachers destarch a plant before a photosynthesis light experiment?",
+      "hint": "Think about what would confuse the starch test if old starch was still there."
+    },
+    {
+      "question": "A leaf is given light and water but no carbon dioxide. Will starch form? Explain.",
+      "hint": "List the raw materials of photosynthesis and see which one is missing."
+    }
+  ],
+  "needs_human_check": false,
+  "warning": null
+}
